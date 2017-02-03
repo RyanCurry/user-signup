@@ -107,6 +107,9 @@ class MainHandler(webapp2.RequestHandler):
             error1="Enter a Username"
         elif " " in username:
             error1="Invalid Username: must not contain spaces"
+        elif len(username)<=3:
+            error1="Invalid Username: must be at least 4 characters long"
+
 
         if not pass1 or pass1.strip =="":
             error2="Enter a Password"
